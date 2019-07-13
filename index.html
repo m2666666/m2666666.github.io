@@ -62,45 +62,6 @@
       <div class="outer">
         <section id="main">
   
-    <article id="post-day0713004" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2019/07/13/day0713004/" class="article-date">
-  <time datetime="2019-07-13T08:27:52.774Z" itemprop="datePublished">2019-07-13</time>
-</a>
-    
-  </div>
-  <div class="article-inner">
-    
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>webpack 基础知识<br>webpack 是一个现代 JavaScript 应用程序的静态模块打包器(module bundler)。当 webpack 处理应用程序时，它会递归地构建一个依赖关系图(dependency graph)，其中包含应用程序需要的每个模块，然后将所有这些模块打包成一个或多个 bundle。</p>
-<p>它是高度可配置的，但是，在开始前你需要先理解四个核心概念：</p>
-<p>入口(entry)<br>输出(output)<br>loader<br>插件(plugins)<br>首先我们创建一个目录，初始化 npm，以及在本地安装 webpack：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">mkdir webpack-demo &amp;&amp; cd webpack-demo</span><br><span class="line">npm init -y</span><br><span class="line">npm install --save-dev webpack</span><br></pre></td></tr></table></figure>
-
-<p>在当前练习文件夹的根目录下新建一个名为webpack.config.js的文件，我们在其中写入如下所示的简单配置代码，目前的配置主要涉及到的内容是入口文件路径和打包后文件的存放路径。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">module.exports = &#123;</span><br><span class="line">entry: __dirname + &quot;/app/main.js&quot;,//唯一的入口文件</span><br><span class="line">output:&#123;</span><br><span class="line">path: __dirname + &quot;public&quot;,//打包后文件的路径</span><br><span class="line">filename:&quot;bundle.js&quot;//打包后输出文件的文件名</span><br><span class="line">&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>入口起点(entry point)指示 webpack 应该使用哪个模块，来作为构建其内部依赖图的开始。进入入口起点后，webpack 会找出有哪些模块和库是入口起点（直接和间接）依赖的。在 webpack 配置中配置 entry 属性，来指定一个入口起点（或多个入口起点）。</p>
-<p>output 属性告诉 webpack 在哪里输出它所创建的 bundles，以及如何命名这些文件。你可以通过在配置中指定一个 output 字段，来配置这些处理过程</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">module.exports=&#123;</span><br><span class="line">    entry:__dirname+&quot;/app/main.js&quot;,//定义入口文件</span><br><span class="line">    output:&#123;</span><br><span class="line">        path:__dirname+&quot;/public&quot;,//打包后的文件路径</span><br><span class="line">        filename:&quot;bundle.js&quot;,//打包后的文件名</span><br><span class="line">    &#125;,</span><br><span class="line">    devtool:&quot;eval-source-map&quot;,</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><a href="https://blog.csdn.net/qiphon3650/article/details/78376915" target="_blank" rel="noopener">https://blog.csdn.net/qiphon3650/article/details/78376915</a></p>
-
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="https://m2666666.github.io/2019/07/13/day0713004/" data-id="cjy19tzrx000kqctkvo5gq1k7" class="article-share-link">Share</a>
-      
-      
-    </footer>
-  </div>
-  
-</article>
-
-
-  
     <article id="post-day0713003" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2019/07/13/day0713003/" class="article-date">
@@ -121,7 +82,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://m2666666.github.io/2019/07/13/day0713003/" data-id="cjy19tzrw000jqctka5fk9p0u" class="article-share-link">Share</a>
+      <a data-url="https://m2666666.github.io/2019/07/13/day0713003/" data-id="cjy19vf5a000i3gtk51tmr0tv" class="article-share-link">Share</a>
       
       
     </footer>
@@ -149,7 +110,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://m2666666.github.io/2019/07/13/day0713002/" data-id="cjy19tzrv000iqctkia63ayzj" class="article-share-link">Share</a>
+      <a data-url="https://m2666666.github.io/2019/07/13/day0713002/" data-id="cjy19vf5b000j3gtk8zuccr7x" class="article-share-link">Share</a>
       
       
     </footer>
@@ -183,7 +144,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://m2666666.github.io/2019/07/13/day0713001/" data-id="cjy19tzrv000hqctkh7esrnvz" class="article-share-link">Share</a>
+      <a data-url="https://m2666666.github.io/2019/07/13/day0713001/" data-id="cjy19vf59000g3gtka1v3j6sq" class="article-share-link">Share</a>
       
       
     </footer>
@@ -236,7 +197,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://m2666666.github.io/2019/07/13/day0613001/" data-id="cjy19tzru000gqctkucrbmyns" class="article-share-link">Share</a>
+      <a data-url="https://m2666666.github.io/2019/07/13/day0613001/" data-id="cjy19vf58000f3gtkdtquhhhf" class="article-share-link">Share</a>
       
       
     </footer>
@@ -274,7 +235,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://m2666666.github.io/2019/07/13/day0526001/" data-id="cjy19tzrt000fqctk7k9yao3u" class="article-share-link">Share</a>
+      <a data-url="https://m2666666.github.io/2019/07/13/day0526001/" data-id="cjy19vf57000d3gtk5bbuxk4s" class="article-share-link">Share</a>
       
       
     </footer>
@@ -332,7 +293,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://m2666666.github.io/2019/07/13/day0515001/" data-id="cjy19tzrt000eqctk0kufycin" class="article-share-link">Share</a>
+      <a data-url="https://m2666666.github.io/2019/07/13/day0515001/" data-id="cjy19vf57000e3gtk5754uutk" class="article-share-link">Share</a>
       
       
     </footer>
@@ -360,7 +321,33 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://m2666666.github.io/2019/07/13/day0506001/" data-id="cjy19tzrs000dqctkrnvvoi82" class="article-share-link">Share</a>
+      <a data-url="https://m2666666.github.io/2019/07/13/day0506001/" data-id="cjy19vf56000c3gtkbuwty3g4" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-day0419001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/13/day0419001/" class="article-date">
+  <time datetime="2019-07-13T08:27:52.756Z" itemprop="datePublished">2019-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="form-表单例如文本框的值是用val-获取的，容器是用-text-或html"><a href="#form-表单例如文本框的值是用val-获取的，容器是用-text-或html" class="headerlink" title="form 表单例如文本框的值是用val()获取的，容器是用 text()或html()"></a>form 表单例如文本框的值是用val()获取的，容器是用 text()或html()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var $span = $(&apos;span&apos;);</span><br><span class="line">alert($span.text() + &quot;_&quot; + $span.html());</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://m2666666.github.io/2019/07/13/day0419001/" data-id="cjy19vf54000a3gtks4o2gfms" class="article-share-link">Share</a>
       
       
     </footer>
@@ -430,7 +417,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://m2666666.github.io/2019/07/13/day0421001/" data-id="cjy19tzs0000lqctki6gf467s" class="article-share-link">Share</a>
+      <a data-url="https://m2666666.github.io/2019/07/13/day0421001/" data-id="cjy19vf5f000k3gtkrph7og9j" class="article-share-link">Share</a>
       
       
     </footer>
@@ -440,10 +427,10 @@
 
 
   
-    <article id="post-day0419001" class="article article-type-post" itemscope itemprop="blogPost">
+    <article id="post-day0414001" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2019/07/13/day0419001/" class="article-date">
-  <time datetime="2019-07-13T08:27:52.756Z" itemprop="datePublished">2019-07-13</time>
+    <a href="/2019/07/13/day0414001/" class="article-date">
+  <time datetime="2019-07-13T08:27:52.751Z" itemprop="datePublished">2019-07-13</time>
 </a>
     
   </div>
@@ -452,11 +439,37 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="form-表单例如文本框的值是用val-获取的，容器是用-text-或html"><a href="#form-表单例如文本框的值是用val-获取的，容器是用-text-或html" class="headerlink" title="form 表单例如文本框的值是用val()获取的，容器是用 text()或html()"></a>form 表单例如文本框的值是用val()获取的，容器是用 text()或html()</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var $span = $(&apos;span&apos;);</span><br><span class="line">alert($span.text() + &quot;_&quot; + $span.html());</span><br></pre></td></tr></table></figure>
+        <hr>
+<h2 id="title-jQuery"><a href="#title-jQuery" class="headerlink" title="title:jQuery"></a>title:jQuery</h2><h3 id="dom对象转换成jQuery对象"><a href="#dom对象转换成jQuery对象" class="headerlink" title="dom对象转换成jQuery对象"></a>dom对象转换成jQuery对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var div1=document.getElementById(&quot;one&quot;);</span><br><span class="line">var $div1=$(div1);</span><br><span class="line">console.log($div1);</span><br></pre></td></tr></table></figure>
+
+<h3 id="jQuery对象转换成dom对象。"><a href="#jQuery对象转换成dom对象。" class="headerlink" title="jQuery对象转换成dom对象。"></a>jQuery对象转换成dom对象。</h3><p>1.使用下标来区出来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var $divs=$(&apos;div&apos;);</span><br><span class="line">console.log($divs);</span><br></pre></td></tr></table></figure>
+
+<p>//var div1=$divs[0];<br>//console.log(div1);<br>2.使用jQuery的方法 get();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var div2=$divs.get(1);</span><br><span class="line">console.log(div2);</span><br></pre></td></tr></table></figure>
+
+<h3 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h3><h4 id="和css里面的选择器是一样的"><a href="#和css里面的选择器是一样的" class="headerlink" title="和css里面的选择器是一样的"></a>和css里面的选择器是一样的</h4><p>id选择器     $(‘#id’)<br>类选择器     $(“.类名”)<br>标签选择器  $(“标签名”)<br>并集选择器  $(‘.box,.box2’)<br>交集选择器  $(‘li.current’)</p>
+<h3 id="jQuery-层级选择器"><a href="#jQuery-层级选择器" class="headerlink" title="jQuery 层级选择器"></a>jQuery 层级选择器</h3><p>子代选择器  $(‘ul&gt;li’)<br>后代选择器 $(‘ul li’)</p>
+<h3 id="jQuery-过滤选择器"><a href="#jQuery-过滤选择器" class="headerlink" title="jQuery 过滤选择器"></a>jQuery 过滤选择器</h3><p>:eq(index)<br>:odd<br>:even</p>
+<h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//定义一个类</span><br><span class="line">function AClass()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">//2.给这个类添加一个静态方法</span><br><span class="line">//直接添加给类的就是静态方法</span><br><span class="line">AClass.staticMethod=function()&#123;</span><br><span class="line">	alert(&apos;staticMethod&apos;);</span><br><span class="line">&#125;</span><br><span class="line">//静态方法通类名调用</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//3.给这个类添加一个实例方法</span><br><span class="line">AClass.prototype.instanceMethod=function()&#123;</span><br><span class="line">	alert(&apos;instanceMethod&apos;);</span><br><span class="line">&#125;</span><br><span class="line">//实例方法通过类的实例调用</span><br><span class="line">//创建一个实例（创建一个对象）</span><br><span class="line">var a=new AClass();</span><br><span class="line">//通过实例调用实例方法</span><br><span class="line">a.instanceMethod();</span><br></pre></td></tr></table></figure>
+
+<h3 id="静态方法each方法"><a href="#静态方法each方法" class="headerlink" title="静态方法each方法"></a>静态方法each方法</h3><p>第一个参数：遍历到的元素<br>第二个参数：当前遍历到的索引<br>注意点：<br>原生的forEach方法只能遍历数组，不能遍历伪数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var arr=[1,3,5,7,9];</span><br><span class="line">var obj=&#123;0:1,1:3,2:4,3:5,4:7,length:5&#125;;</span><br><span class="line"></span><br><span class="line">arr.forEach(function(value,index)&#123;</span><br><span class="line"></span><br><span class="line">	console.log(index,value);</span><br><span class="line">&#125;);</span><br><span class="line">obj.forEach(function (value,index)&#123;</span><br><span class="line">	console.log(index,value);//报错</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="jQuery-利用each静态方法遍历数组"><a href="#jQuery-利用each静态方法遍历数组" class="headerlink" title="jQuery 利用each静态方法遍历数组"></a>jQuery 利用each静态方法遍历数组</h5><p>第一个参数：当前遍历到的索引<br>第二个参数：遍历到的元素<br>注意点：each是可以遍历伪数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$.each(arr,function(index,value)&#123;</span><br><span class="line">	console.log(index,value);</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">$.each(obj,function(index,value)&#123;</span><br><span class="line">	console.log(index,value);</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="静态方法的map方法"><a href="#静态方法的map方法" class="headerlink" title="静态方法的map方法"></a>静态方法的map方法</h3><p>1.利用原生js的map方法遍历<br>jQuery中的each静态方法和map静态方法的区别：<br>each静态方法默认的返回值就是，遍历谁就返回谁<br>map静态方法默认的返回值是一个空数组<br>each静态方法不支持在回调函数中对遍历的数组进行处理<br>map静态方法可以在回调函数中通过return对遍历数组进行处理，然后生成一个新的数组返回</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">var arr=[1,3,5,7,8,8,9];</span><br><span class="line">var obj=&#123;0:3,1:4,2:5,3:7,4:8,length:5&#125;;</span><br><span class="line"></span><br><span class="line">var res=arr.forEach(function(value,index)&#123;</span><br><span class="line"></span><br><span class="line">	console.log(index,value);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">var res2=$.map(arr,function(value,index)&#123;</span><br><span class="line">	console.log(index,value);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>###jQuery Callback 方法<br>Callback 函数在当前动画 100% 完成之后执行。</p>
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://m2666666.github.io/2019/07/13/day0419001/" data-id="cjy19tzro0009qctktyj80uyu" class="article-share-link">Share</a>
+      <a data-url="https://m2666666.github.io/2019/07/13/day0414001/" data-id="cjy19vf55000b3gtkjzocoqn3" class="article-share-link">Share</a>
       
       
     </footer>
@@ -502,10 +515,6 @@
       <ul>
         
           <li>
-            <a href="/2019/07/13/day0713004/">(no title)</a>
-          </li>
-        
-          <li>
             <a href="/2019/07/13/day0713003/">(no title)</a>
           </li>
         
@@ -519,6 +528,10 @@
         
           <li>
             <a href="/2019/07/13/day0613001/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0526001/">(no title)</a>
           </li>
         
       </ul>
