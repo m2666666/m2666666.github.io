@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>zxm博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="TypeScriptA教程给JavaScript 添加特性的语言扩展。类型批注和编译时类型检查类型推断类型察除接口枚举Mixin泛型编程名字空间元组Await类模块lambda 函数的箭头语言可选参数以及默认参数 Null 和 Undefinednull在JavaScript 中的null 表示“什么都没有”null 是一个只有一个值 的特殊类型，表示一个空对象引用。用typedof 检测null">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zxm博客">
+<meta property="og:url" content="https://m2666666.github.io/2019/07/13/day0713002/index.html">
+<meta property="og:site_name" content="zxm博客">
+<meta property="og:description" content="TypeScriptA教程给JavaScript 添加特性的语言扩展。类型批注和编译时类型检查类型推断类型察除接口枚举Mixin泛型编程名字空间元组Await类模块lambda 函数的箭头语言可选参数以及默认参数 Null 和 Undefinednull在JavaScript 中的null 表示“什么都没有”null 是一个只有一个值 的特殊类型，表示一个空对象引用。用typedof 检测null">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-13T08:27:52.777Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zxm博客">
+<meta name="twitter:description" content="TypeScriptA教程给JavaScript 添加特性的语言扩展。类型批注和编译时类型检查类型推断类型察除接口枚举Mixin泛型编程名字空间元组Await类模块lambda 函数的箭头语言可选参数以及默认参数 Null 和 Undefinednull在JavaScript 中的null 表示“什么都没有”null 是一个只有一个值 的特殊类型，表示一个空对象引用。用typedof 检测null">
+  
+    <link rel="alternate" href="/atom.xml" title="zxm博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">zxm博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://m2666666.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day0713002" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/13/day0713002/" class="article-date">
+  <time datetime="2019-07-13T08:27:52.772Z" itemprop="datePublished">2019-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>TypeScriptA教程<br>给JavaScript 添加特性的语言扩展。<br>类型批注和编译时类型检查<br>类型推断<br>类型察除<br>接口<br>枚举<br>Mixin<br>泛型编程<br>名字空间<br>元组<br>Await<br>类<br>模块<br>lambda 函数的箭头语言<br>可选参数以及默认参数</p>
+<p>Null 和 Undefined<br>null<br>在JavaScript 中的null 表示“什么都没有”<br>null 是一个只有一个值 的特殊类型，表示一个空对象引用。<br>用typedof 检测null 返回是object<br>undefined<br>在JavaSciptt中，undefined 是一个没有设置值的变量。<br>typeof 一个没有值的变量会返回undefined.<br>Null 和 Undefined 是其他任何类型 (包括void) 的子类型 ，可以赋值给其它类型，如数字类型此时赋值后类型会变成null 或undefined. 而在TypeScript中启用严格的空校验（strictNullChecks）特性，就可以使用null和undefined 只能被赋值给void或本身对应的类型，示例代码如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">//启用 --stdrictNullChecks</span><br><span class="line">let x: number;</span><br><span class="line">x=-1;//运行正确</span><br><span class="line">x=undefined; //运行错误</span><br><span class="line">x=null; //运行错误</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://m2666666.github.io/2019/07/13/day0713002/" data-id="cjy19p4zj000n5ktknfx5n4n5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/13/day0713003/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/13/day0713001/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/13/day0713004/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713003/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713002/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713001/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0613001/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 zxm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

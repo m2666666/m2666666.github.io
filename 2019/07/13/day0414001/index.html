@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>zxm博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="title:jQuerydom对象转换成jQuery对象123var div1=document.getElementById(&amp;quot;one&amp;quot;);var $div1=$(div1);console.log($div1);  jQuery对象转换成dom对象。1.使用下标来区出来。 12var $divs=$(&amp;apos;div&amp;apos;);console.log($divs);">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zxm博客">
+<meta property="og:url" content="https://m2666666.github.io/2019/07/13/day0414001/index.html">
+<meta property="og:site_name" content="zxm博客">
+<meta property="og:description" content="title:jQuerydom对象转换成jQuery对象123var div1=document.getElementById(&amp;quot;one&amp;quot;);var $div1=$(div1);console.log($div1);  jQuery对象转换成dom对象。1.使用下标来区出来。 12var $divs=$(&amp;apos;div&amp;apos;);console.log($divs);">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-13T08:27:52.776Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zxm博客">
+<meta name="twitter:description" content="title:jQuerydom对象转换成jQuery对象123var div1=document.getElementById(&amp;quot;one&amp;quot;);var $div1=$(div1);console.log($div1);  jQuery对象转换成dom对象。1.使用下标来区出来。 12var $divs=$(&amp;apos;div&amp;apos;);console.log($divs);">
+  
+    <link rel="alternate" href="/atom.xml" title="zxm博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">zxm博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://m2666666.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day0414001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/13/day0414001/" class="article-date">
+  <time datetime="2019-07-13T08:27:52.751Z" itemprop="datePublished">2019-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <hr>
+<h2 id="title-jQuery"><a href="#title-jQuery" class="headerlink" title="title:jQuery"></a>title:jQuery</h2><h3 id="dom对象转换成jQuery对象"><a href="#dom对象转换成jQuery对象" class="headerlink" title="dom对象转换成jQuery对象"></a>dom对象转换成jQuery对象</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var div1=document.getElementById(&quot;one&quot;);</span><br><span class="line">var $div1=$(div1);</span><br><span class="line">console.log($div1);</span><br></pre></td></tr></table></figure>
+
+<h3 id="jQuery对象转换成dom对象。"><a href="#jQuery对象转换成dom对象。" class="headerlink" title="jQuery对象转换成dom对象。"></a>jQuery对象转换成dom对象。</h3><p>1.使用下标来区出来。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var $divs=$(&apos;div&apos;);</span><br><span class="line">console.log($divs);</span><br></pre></td></tr></table></figure>
+
+<p>//var div1=$divs[0];<br>//console.log(div1);<br>2.使用jQuery的方法 get();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">var div2=$divs.get(1);</span><br><span class="line">console.log(div2);</span><br></pre></td></tr></table></figure>
+
+<h3 id="基本选择器"><a href="#基本选择器" class="headerlink" title="基本选择器"></a>基本选择器</h3><h4 id="和css里面的选择器是一样的"><a href="#和css里面的选择器是一样的" class="headerlink" title="和css里面的选择器是一样的"></a>和css里面的选择器是一样的</h4><p>id选择器     $(‘#id’)<br>类选择器     $(“.类名”)<br>标签选择器  $(“标签名”)<br>并集选择器  $(‘.box,.box2’)<br>交集选择器  $(‘li.current’)</p>
+<h3 id="jQuery-层级选择器"><a href="#jQuery-层级选择器" class="headerlink" title="jQuery 层级选择器"></a>jQuery 层级选择器</h3><p>子代选择器  $(‘ul&gt;li’)<br>后代选择器 $(‘ul li’)</p>
+<h3 id="jQuery-过滤选择器"><a href="#jQuery-过滤选择器" class="headerlink" title="jQuery 过滤选择器"></a>jQuery 过滤选择器</h3><p>:eq(index)<br>:odd<br>:even</p>
+<h3 id="静态方法"><a href="#静态方法" class="headerlink" title="静态方法"></a>静态方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//定义一个类</span><br><span class="line">function AClass()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">//2.给这个类添加一个静态方法</span><br><span class="line">//直接添加给类的就是静态方法</span><br><span class="line">AClass.staticMethod=function()&#123;</span><br><span class="line">	alert(&apos;staticMethod&apos;);</span><br><span class="line">&#125;</span><br><span class="line">//静态方法通类名调用</span><br></pre></td></tr></table></figure>
+
+<h3 id="实例方法"><a href="#实例方法" class="headerlink" title="实例方法"></a>实例方法</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">//3.给这个类添加一个实例方法</span><br><span class="line">AClass.prototype.instanceMethod=function()&#123;</span><br><span class="line">	alert(&apos;instanceMethod&apos;);</span><br><span class="line">&#125;</span><br><span class="line">//实例方法通过类的实例调用</span><br><span class="line">//创建一个实例（创建一个对象）</span><br><span class="line">var a=new AClass();</span><br><span class="line">//通过实例调用实例方法</span><br><span class="line">a.instanceMethod();</span><br></pre></td></tr></table></figure>
+
+<h3 id="静态方法each方法"><a href="#静态方法each方法" class="headerlink" title="静态方法each方法"></a>静态方法each方法</h3><p>第一个参数：遍历到的元素<br>第二个参数：当前遍历到的索引<br>注意点：<br>原生的forEach方法只能遍历数组，不能遍历伪数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var arr=[1,3,5,7,9];</span><br><span class="line">var obj=&#123;0:1,1:3,2:4,3:5,4:7,length:5&#125;;</span><br><span class="line"></span><br><span class="line">arr.forEach(function(value,index)&#123;</span><br><span class="line"></span><br><span class="line">	console.log(index,value);</span><br><span class="line">&#125;);</span><br><span class="line">obj.forEach(function (value,index)&#123;</span><br><span class="line">	console.log(index,value);//报错</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<h5 id="jQuery-利用each静态方法遍历数组"><a href="#jQuery-利用each静态方法遍历数组" class="headerlink" title="jQuery 利用each静态方法遍历数组"></a>jQuery 利用each静态方法遍历数组</h5><p>第一个参数：当前遍历到的索引<br>第二个参数：遍历到的元素<br>注意点：each是可以遍历伪数组</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">$.each(arr,function(index,value)&#123;</span><br><span class="line">	console.log(index,value);</span><br><span class="line">	&#125;)</span><br><span class="line"></span><br><span class="line">$.each(obj,function(index,value)&#123;</span><br><span class="line">	console.log(index,value);</span><br><span class="line">	&#125;)</span><br></pre></td></tr></table></figure>
+
+<h3 id="静态方法的map方法"><a href="#静态方法的map方法" class="headerlink" title="静态方法的map方法"></a>静态方法的map方法</h3><p>1.利用原生js的map方法遍历<br>jQuery中的each静态方法和map静态方法的区别：<br>each静态方法默认的返回值就是，遍历谁就返回谁<br>map静态方法默认的返回值是一个空数组<br>each静态方法不支持在回调函数中对遍历的数组进行处理<br>map静态方法可以在回调函数中通过return对遍历数组进行处理，然后生成一个新的数组返回</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br><span class="line">var arr=[1,3,5,7,8,8,9];</span><br><span class="line">var obj=&#123;0:3,1:4,2:5,3:7,4:8,length:5&#125;;</span><br><span class="line"></span><br><span class="line">var res=arr.forEach(function(value,index)&#123;</span><br><span class="line"></span><br><span class="line">	console.log(index,value);</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">var res2=$.map(arr,function(value,index)&#123;</span><br><span class="line">	console.log(index,value);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+
+<p>###jQuery Callback 方法<br>Callback 函数在当前动画 100% 完成之后执行。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://m2666666.github.io/2019/07/13/day0414001/" data-id="cjy19p4xy000c5ktkujripn0k" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/13/day0421001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/13/day0413001/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/13/day0713004/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713003/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713002/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713001/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0613001/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 zxm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>zxm博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="构造函数内部原理1.在函数体最前面隐式的加上this={}2.执行this.xxx=xxx;3.隐式的返回this 123456789101112131415161718192021&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;script">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zxm博客">
+<meta property="og:url" content="https://m2666666.github.io/2019/07/13/day0404001/index.html">
+<meta property="og:site_name" content="zxm博客">
+<meta property="og:description" content="构造函数内部原理1.在函数体最前面隐式的加上this={}2.执行this.xxx=xxx;3.隐式的返回this 123456789101112131415161718192021&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;script">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-13T08:27:52.776Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zxm博客">
+<meta name="twitter:description" content="构造函数内部原理1.在函数体最前面隐式的加上this={}2.执行this.xxx=xxx;3.隐式的返回this 123456789101112131415161718192021&amp;lt;!DOCTYPE html&amp;gt;&amp;lt;html&amp;gt;&amp;lt;head&amp;gt;	&amp;lt;title&amp;gt;&amp;lt;/title&amp;gt;&amp;lt;/head&amp;gt;&amp;lt;body&amp;gt;&amp;lt;script">
+  
+    <link rel="alternate" href="/atom.xml" title="zxm博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">zxm博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://m2666666.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day0404001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/13/day0404001/" class="article-date">
+  <time datetime="2019-07-13T08:27:52.728Z" itemprop="datePublished">2019-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="构造函数内部原理"><a href="#构造函数内部原理" class="headerlink" title="构造函数内部原理"></a>构造函数内部原理</h3><p>1.在函数体最前面隐式的加上this={}<br>2.执行this.xxx=xxx;<br>3.隐式的返回this</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	function Person(name,height)&#123;</span><br><span class="line">		//var this=&#123;&#125;</span><br><span class="line">		this.name=name;</span><br><span class="line">		this.height=height;</span><br><span class="line">		this.say=function()&#123;</span><br><span class="line">			console.log(this.say);</span><br><span class="line"></span><br><span class="line">		&#125;</span><br><span class="line">		return 123; //原始值不起作用 返回还是this，默認都是返回對象或者数组，function</span><br><span class="line">		//return this;</span><br><span class="line">	&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">var foo=123;</span><br><span class="line">function print()&#123;</span><br><span class="line">	//var this =Object.create(print.prototype)</span><br><span class="line">	this.foo=234;</span><br><span class="line">	console.log(foo);//234</span><br><span class="line">	//如果new print(); console.log(foo);123</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="包装类"><a href="#包装类" class="headerlink" title="包装类"></a>包装类</h3><p>原始值是没有属性和方法<br>new String();<br>new Boolean();<br>new Number();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var str=&quot;abcd&quot;;</span><br><span class="line">str.length=2;</span><br><span class="line">//new String(&apos;abcd&apos;).length=2;delete</span><br><span class="line">//</span><br><span class="line">//</span><br><span class="line">console.log(str);</span><br></pre></td></tr></table></figure>
+
+<h3 id="继承模式-命名空间-对象枚举"><a href="#继承模式-命名空间-对象枚举" class="headerlink" title="继承模式 命名空间 对象枚举"></a>继承模式 命名空间 对象枚举</h3><p>1.传统形式—》原型链<br>过多的继承了没用的属性<br>2.借用构造函数<br>不能继承借用构造的原型<br>每次构造函数都要多走一个函数<br>3.共享原型<br>不能随便改动自己的原型<br>4.圣杯模式</p>
+<h4 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">Grand.procotype.lastName=&apos;ji&apos;;</span><br><span class="line">function Grand()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var grand=new Grand();</span><br><span class="line">Father.prototype=grand;</span><br><span class="line">function Father()&#123;</span><br><span class="line">	this.name=&apos;hehe&apos;;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var father=new Father();</span><br><span class="line">Son.prototype=father;</span><br><span class="line">function Son()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var son=new Son();</span><br></pre></td></tr></table></figure>
+
+<p>不想用的方法也继承了</p>
+<h3 id="构造方法继承"><a href="#构造方法继承" class="headerlink" title="构造方法继承"></a>构造方法继承</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Person(name,age,sex)&#123;</span><br><span class="line">	this.name=name;</span><br><span class="line">	this.age=age;</span><br><span class="line">this.sex=sex;&#125;</span><br><span class="line">function Student(name,age,sex.grade)&#123;</span><br><span class="line">	Person.call(this,name,age,sex);</span><br><span class="line">	this.grade=grade;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var student=new Student();</span><br></pre></td></tr></table></figure>
+
+<p>缺点：视觉上省了，但是多走一个函数</p>
+<h3 id="共享原型"><a href="#共享原型" class="headerlink" title="共享原型"></a>共享原型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">Father.prototype.lastName=&quot;deng&quot;;</span><br><span class="line">function Father()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function Son()&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">Son.prototype=Father.prototype</span><br></pre></td></tr></table></figure>
+
+<h3 id="圣杯模式"><a href="#圣杯模式" class="headerlink" title="圣杯模式"></a>圣杯模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">function inherit(Target,Origin)&#123;</span><br><span class="line">	function F()&#123;&#125;;</span><br><span class="line">	F.prototype=Origin.prototype;</span><br><span class="line">	Target.prototype=new F();</span><br><span class="line">	//Target.prototype.constuctor=Targer; //son.cotructor 归位</span><br><span class="line">	//Target.prototype.uber=Origin.prototype; //知道自己继承的是谁</span><br><span class="line">	&#125; </span><br><span class="line">	Father.prototype.lastName=&quot;deng&quot;;</span><br><span class="line">	function Father()&#123;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	function Son()&#123;</span><br><span class="line">			</span><br><span class="line">	&#125;</span><br><span class="line">	inherit(Son,Father);</span><br><span class="line">	var son=new Son();//son.contructor 是 function Father()&#123;&#125;</span><br><span class="line">	var father=new Father();</span><br><span class="line">	//son.__proto__---&gt;new F().__proto__--&gt;Father.prototyep</span><br></pre></td></tr></table></figure>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://m2666666.github.io/2019/07/13/day0404001/" data-id="cjy19p4xc00065ktk174yia1e" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/13/day0401001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/13/day0403001/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/13/day0713004/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713003/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713002/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713001/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0613001/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 zxm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>zxm博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="函数命名规则，小驼峰 多个单词 首字母小写其他单词首字母大写表达式函数就不能没有namearguments–[]length 12345678910function sum()&amp;#123;//argments [1,2,3,4,5,6,7,8];var result=0;for(var i=0;i&amp;lt;arguments.length;i++)&amp;#123;	result+=arguments[i">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zxm博客">
+<meta property="og:url" content="https://m2666666.github.io/2019/07/13/day0401001/index.html">
+<meta property="og:site_name" content="zxm博客">
+<meta property="og:description" content="函数命名规则，小驼峰 多个单词 首字母小写其他单词首字母大写表达式函数就不能没有namearguments–[]length 12345678910function sum()&amp;#123;//argments [1,2,3,4,5,6,7,8];var result=0;for(var i=0;i&amp;lt;arguments.length;i++)&amp;#123;	result+=arguments[i">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-13T08:27:52.776Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zxm博客">
+<meta name="twitter:description" content="函数命名规则，小驼峰 多个单词 首字母小写其他单词首字母大写表达式函数就不能没有namearguments–[]length 12345678910function sum()&amp;#123;//argments [1,2,3,4,5,6,7,8];var result=0;for(var i=0;i&amp;lt;arguments.length;i++)&amp;#123;	result+=arguments[i">
+  
+    <link rel="alternate" href="/atom.xml" title="zxm博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">zxm博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://m2666666.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day0401001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/13/day0401001/" class="article-date">
+  <time datetime="2019-07-13T08:27:52.728Z" itemprop="datePublished">2019-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="函数"><a href="#函数" class="headerlink" title="函数"></a>函数</h3><p>命名规则，小驼峰 多个单词 首字母小写其他单词首字母大写<br>表达式函数就不能没有name<br>arguments–[]<br>length</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function sum()&#123;</span><br><span class="line">//argments [1,2,3,4,5,6,7,8];</span><br><span class="line">var result=0;</span><br><span class="line">for(var i=0;i&lt;arguments.length;i++)&#123;</span><br><span class="line">	result+=arguments[i];</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">console.log(result);</span><br><span class="line">&#125;</span><br><span class="line">sum(1,3,4,5.5,6,7,8,9);</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function sum(a,b)&#123;</span><br><span class="line">	//arguments[1,2]</span><br><span class="line">	//var a=1;</span><br><span class="line">	//a=2;</span><br><span class="line">	//arguments[0]=3;</span><br><span class="line">	//console.log(a);</span><br><span class="line">	b=2;</span><br><span class="line">	console.log(arguments[1]);//undined 没有映射关系</span><br><span class="line">&#125;</span><br><span class="line">sum(1)</span><br></pre></td></tr></table></figure>
+
+<h5 id="1-命名函数表达式"><a href="#1-命名函数表达式" class="headerlink" title="1.命名函数表达式"></a>1.命名函数表达式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var test=function abc()&#123;</span><br><span class="line">	document.write(&apos;a&apos;);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="2-匿名函数表达式-–函数表达式"><a href="#2-匿名函数表达式-–函数表达式" class="headerlink" title="2.匿名函数表达式 –函数表达式"></a>2.匿名函数表达式 –函数表达式</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var demo=function()&#123;</span><br><span class="line">	document.write(&apos;b&apos;);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="预编译"><a href="#预编译" class="headerlink" title="预编译"></a>预编译</h3><p>AO:<br>1.创建AO对象<br>2.找形参和变量声明，将变量和形参名作为AO属性名，值为undefined<br>3.将实参值与形参统一<br>4.在函数体里面找函数声明，值赋予函数体<br>GO:<br>1.创建GO对象<br>2.找形参和变量声明，将变量和形参名作为AO属性名，值为undefined<br>3.在函数体里面找函数声明，值赋予函数体</p>
+<h3 id="主流浏览器"><a href="#主流浏览器" class="headerlink" title="主流浏览器"></a>主流浏览器</h3><p>IE trident<br>Chrome webkit/blink<br>firefox Gecko<br>Opera presto<br>Safari webkit</p>
+<h3 id="js执行队列-单线程-同一时间只能做一件事"><a href="#js执行队列-单线程-同一时间只能做一件事" class="headerlink" title="js执行队列 单线程 同一时间只能做一件事"></a>js执行队列 单线程 同一时间只能做一件事</h3><h4 id="js-三大部分"><a href="#js-三大部分" class="headerlink" title="js 三大部分"></a>js 三大部分</h4><p>ECMAScript,DOM,BOM</p>
+<h3 id="运行期上下文-作用域"><a href="#运行期上下文-作用域" class="headerlink" title="运行期上下文 作用域"></a>运行期上下文 作用域</h3><h3 id="闭包"><a href="#闭包" class="headerlink" title="闭包"></a>闭包</h3><p>当内部函数被保存在外部时，将会生成闭包。闭包会导致原有作用不释放，造成内存泄露</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">functing test()&#123;</span><br><span class="line">	var temp=100;</span><br><span class="line">	 function a()&#123;</span><br><span class="line">	 	console.log(temp);</span><br><span class="line">	 &#125;</span><br><span class="line">	 return a;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var demo=test();</span><br><span class="line">demo();</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var demo;</span><br><span class="line">function  test()&#123;</span><br><span class="line">	var abc=100;</span><br><span class="line">	function a()&#123;</span><br><span class="line">		console.log(abc);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	demo=a;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">test();</span><br><span class="line">demo()；</span><br></pre></td></tr></table></figure>
+
+<h4 id="闭包作用"><a href="#闭包作用" class="headerlink" title="闭包作用"></a>闭包作用</h4><h5 id="实现共有变量-可以实现缓存（存储结构）-可以实现封装，属性私有化-模块化开发，防止污染全局变量"><a href="#实现共有变量-可以实现缓存（存储结构）-可以实现封装，属性私有化-模块化开发，防止污染全局变量" class="headerlink" title="实现共有变量  可以实现缓存（存储结构） 可以实现封装，属性私有化 模块化开发，防止污染全局变量"></a>实现共有变量  可以实现缓存（存储结构） 可以实现封装，属性私有化 模块化开发，防止污染全局变量</h5><h3 id="立即执行函数"><a href="#立即执行函数" class="headerlink" title="立即执行函数"></a>立即执行函数</h3><p>定义：此类函数没有声明，在一次执行过后即释放。适合做初试化工作。<br>能被执行符号执行的表达式，这个函数的函数名字会被忽略</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	var num=(function(a,b,c)&#123;</span><br><span class="line">var d=a*b*c;</span><br><span class="line">return d;</span><br><span class="line">	&#125;(1,3,4))</span><br><span class="line">	//</span><br><span class="line"></span><br><span class="line">	function num()&#123;&#125;() //语法错误 这是函数声明</span><br><span class="line">	function num()&#123;&#125; ; num(); //函数引用 ，看这不像表达式。就表达式</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="闭包-1"><a href="#闭包-1" class="headerlink" title="闭包"></a>闭包</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">function  test()&#123;</span><br><span class="line">	var arr=[];</span><br><span class="line">	for(var i=0; i&lt;10;i++)&#123;</span><br><span class="line">		arr[0]=function()&#123; //函数在定义时没有意义，只有在执行的时候要看里面</span><br><span class="line">			document.write(i+&quot; &quot;);</span><br><span class="line">			&#125;	</span><br><span class="line">		&#125; </span><br><span class="line">			return arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var myArr=test();</span><br><span class="line">for(var j=0;j&lt;10;j++)&#123;</span><br><span class="line">	myArr[j]();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	function  test()&#123;</span><br><span class="line">	var arr=[];</span><br><span class="line">	for(var i=0; i&lt;10;i++)&#123;</span><br><span class="line">		(function(j)&#123;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">		arr[j]=function()&#123; //函数在定义时没有意义，只有在执行的时候要看里面</span><br><span class="line">			document.write(j+&quot; &quot;);</span><br><span class="line">			&#125;	</span><br><span class="line">		&#125;(i));</span><br><span class="line">		&#125;</span><br><span class="line">			return arr;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var myArr=test();</span><br><span class="line">for(var j=0;j&lt;10;j++)&#123;</span><br><span class="line">	myArr[j]();</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="对象"><a href="#对象" class="headerlink" title="对象"></a>对象</h3><p>1.属性的增删改查<br>2.系统自带 Object(); Array();Number();    Boolean();String();Date();</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">var xiaohao=&#123;</span><br><span class="line">	sex:&quot;women&quot;,</span><br><span class="line">	age:37,</span><br><span class="line">	health:100,</span><br><span class="line">	drink:function()&#123;</span><br><span class="line">		console.log(&quot;苹果汁&quot;);</span><br><span class="line">	&#125;，</span><br><span class="line">	eat:function()&#123;</span><br><span class="line">		console.log(&quot;fond&quot;);</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://m2666666.github.io/2019/07/13/day0401001/" data-id="cjy19p4x600035ktk3so3wp9c" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/13/day0408001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/13/day0404001/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/13/day0713004/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713003/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713002/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713001/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0613001/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 zxm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

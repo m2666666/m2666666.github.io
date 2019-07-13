@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>zxm博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Chart 图表同时控制着其他子组件的加载和更新。子组件Chart图表最顶级的组件，控制着图表的创建、绘制、销毁等。 详细文档见 Chart api Coord坐标系组件，设置 Chart 或者 View 的坐标系类型。 详细文档见 Coord api Axis坐标轴组件，控制图表中坐标轴的样式等。 详细文档见 Axis api Geom几何标记对象，决定创建图表的类型。 详细文档见 Geom a">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zxm博客">
+<meta property="og:url" content="https://m2666666.github.io/2019/07/13/day0613001/index.html">
+<meta property="og:site_name" content="zxm博客">
+<meta property="og:description" content="Chart 图表同时控制着其他子组件的加载和更新。子组件Chart图表最顶级的组件，控制着图表的创建、绘制、销毁等。 详细文档见 Chart api Coord坐标系组件，设置 Chart 或者 View 的坐标系类型。 详细文档见 Coord api Axis坐标轴组件，控制图表中坐标轴的样式等。 详细文档见 Axis api Geom几何标记对象，决定创建图表的类型。 详细文档见 Geom a">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-13T08:27:52.777Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zxm博客">
+<meta name="twitter:description" content="Chart 图表同时控制着其他子组件的加载和更新。子组件Chart图表最顶级的组件，控制着图表的创建、绘制、销毁等。 详细文档见 Chart api Coord坐标系组件，设置 Chart 或者 View 的坐标系类型。 详细文档见 Coord api Axis坐标轴组件，控制图表中坐标轴的样式等。 详细文档见 Axis api Geom几何标记对象，决定创建图表的类型。 详细文档见 Geom a">
+  
+    <link rel="alternate" href="/atom.xml" title="zxm博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">zxm博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://m2666666.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day0613001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/13/day0613001/" class="article-date">
+  <time datetime="2019-07-13T08:27:52.767Z" itemprop="datePublished">2019-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="Chart-图表"><a href="#Chart-图表" class="headerlink" title="Chart 图表"></a>Chart 图表</h3><h4 id="同时控制着其他子组件的加载和更新。"><a href="#同时控制着其他子组件的加载和更新。" class="headerlink" title="同时控制着其他子组件的加载和更新。"></a>同时控制着其他子组件的加载和更新。</h4><h4 id="子组件"><a href="#子组件" class="headerlink" title="子组件"></a>子组件</h4><p>Chart<br>图表最顶级的组件，控制着图表的创建、绘制、销毁等。 详细文档见 Chart api</p>
+<p>Coord<br>坐标系组件，设置 Chart 或者 View 的坐标系类型。 详细文档见 Coord api</p>
+<p>Axis<br>坐标轴组件，控制图表中坐标轴的样式等。 详细文档见 Axis api</p>
+<p>Geom<br>几何标记对象，决定创建图表的类型。 详细文档见 Geom api。</p>
+<p>Label<br>几何标记对象上的文本。 详细文档见 Label api</p>
+<p>Legend<br>图例。 详细文档见 Legend api</p>
+<p>Guide<br>坐标轴组件，控制图表中坐标轴的样式等。 详细文档见 Guide api</p>
+<p>Facet<br>控制 Chart 分面。 详细文档见 Facet api</p>
+<p>View<br>视图组件。 详细文档见 View api/&gt;</p>
+<h3 id="Coord-显示目前位置-坐标"><a href="#Coord-显示目前位置-坐标" class="headerlink" title="Coord  显示目前位置 坐标"></a>Coord  显示目前位置 坐标</h3><h3 id="Axis-轴；轴线；轴心国"><a href="#Axis-轴；轴线；轴心国" class="headerlink" title="Axis 轴；轴线；轴心国"></a>Axis 轴；轴线；轴心国</h3><h4 id="scale-度量"><a href="#scale-度量" class="headerlink" title="scale 度量"></a>scale 度量</h4><p>度量 Scale，是数据空间到图形空间的转换桥梁，负责原始数据到 [0, 1] 区间数值的相互转换工作。针对不同的数据类型对应不同类型的度量。</p>
+<h4 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h4><p>度量的类型是由原始数据的值类型所决定的，所以在介绍度量的类型之前，需要了解下 BizCharts 对数据的分类方式。</p>
+<p>根据数据的类型，支持以下几种度量类型：</p>
+<p>identity，常量类型的数值，也就是说数据的某个字段是不变的常量；<br>linear，连续的数字 [1, 2, 3, 4, 5]；<br>cat，分类, [‘男’, ‘女’]；<br>time，连续的时间类型；<br>timeCat，非连续的时间，比如股票的时间不包括周末或者未开盘的日期；<br>log，连续非线性的 Log 数据，将 [1, 10, 100, 1000] 转换成 [0, 1, 2, 3]（假设底数是 10）；<br>pow，连续非线性的 pow 数据，将 [2, 4, 8, 16, 32] 转换成 [1, 2, 3, 4, 5]。</p>
+<h3 id="Geom-几何"><a href="#Geom-几何" class="headerlink" title="Geom 几何"></a>Geom 几何</h3><h3 id="Label-标签"><a href="#Label-标签" class="headerlink" title="Label 标签"></a>Label 标签</h3><h3 id="Legend-传奇；说明；图例；刻印文字"><a href="#Legend-传奇；说明；图例；刻印文字" class="headerlink" title="Legend 传奇；说明；图例；刻印文字"></a>Legend 传奇；说明；图例；刻印文字</h3><h3 id="Tooltip-工具提示；提示信息；提示框；提示文本"><a href="#Tooltip-工具提示；提示信息；提示框；提示文本" class="headerlink" title="Tooltip 工具提示；提示信息；提示框；提示文本"></a>Tooltip 工具提示；提示信息；提示框；提示文本</h3><h3 id="Guide-指南；向导；入门书"><a href="#Guide-指南；向导；入门书" class="headerlink" title="Guide 指南；向导；入门书"></a>Guide 指南；向导；入门书</h3><h3 id="Facet-面；方面；小平面"><a href="#Facet-面；方面；小平面" class="headerlink" title="Facet 面；方面；小平面"></a>Facet 面；方面；小平面</h3><h3 id="View-观察；视野；意见；风景"><a href="#View-观察；视野；意见；风景" class="headerlink" title="View 观察；视野；意见；风景"></a>View 观察；视野；意见；风景</h3><p>Chart 图表<br>同时控制着其他子组件的加载和更新。<br>子组件<br>Chart<br>图表最顶级的组件，控制着图表的创建、绘制、销毁等。 详细文档见 Chart api</p>
+<p>Coord<br>坐标系组件，设置 Chart 或者 View 的坐标系类型。 详细文档见 Coord api</p>
+<p>Axis<br>坐标轴组件，控制图表中坐标轴的样式等。 详细文档见 Axis api</p>
+<p>Geom<br>几何标记对象，决定创建图表的类型。 详细文档见 Geom api。</p>
+<p>Label<br>几何标记对象上的文本。 详细文档见 Label api</p>
+<p>Legend<br>图例。 详细文档见 Legend api</p>
+<p>Guide<br>坐标轴组件，控制图表中坐标轴的样式等。 详细文档见 Guide api<br>api 有 Line(辅助线(可带文本))，例如表示平均值或者预期分布的直线 Text（辅助文本，指定位置添加文本说明） Image（辅助图片，在图表上添加辅助图片） Region（辅助框，框选一段图区，设置背景，边框） Html（辅助html，指定位置添加自定义html，显示自定义信息） Arc(辅助孤线) REgionFilter（辅助框，框选图区，设置背景，边框等） DataMarker（辅助html,指定位置添加自定义html,显示自定义信息）DataRegion 辅助孤线</p>
+<p>Facet<br>控制 Chart 分面。 详细文档见 Facet api</p>
+<p>View<br>视图组件。 详细文档见 View api/&gt;</p>
+<p>Coord 显示目前位置 坐标<br>Axis 轴；轴线；轴心国<br>scale 度量<br>度量 Scale，是数据空间到图形空间的转换桥梁，负责原始数据到 [0, 1] 区间数值的相互转换工作。针对不同的数据类型对应不同类型的度量。</p>
+<p>类型<br>度量的类型是由原始数据的值类型所决定的，所以在介绍度量的类型之前，需要了解下 BizCharts 对数据的分类方式。</p>
+<p>根据数据的类型，支持以下几种度量类型：</p>
+<p>identity，常量类型的数值，也就是说数据的某个字段是不变的常量；<br>linear，连续的数字 [1, 2, 3, 4, 5]；<br>cat，分类, [‘男’, ‘女’]；<br>time，连续的时间类型；<br>timeCat，非连续的时间，比如股票的时间不包括周末或者未开盘的日期；<br>log，连续非线性的 Log 数据，将 [1, 10, 100, 1000] 转换成 [0, 1, 2, 3]（假设底数是 10）；<br>pow，连续非线性的 pow 数据，将 [2, 4, 8, 16, 32] 转换成 [1, 2, 3, 4, 5]。</p>
+<p>Geom 几何<br>Label 标签<br>Legend 传奇；说明；图例；刻印文字<br>Tooltip 工具提示；提示信息；提示框；提示文本<br>Guide 指南；向导；入门书<br>Facet 面；方面；小平面<br>View 观察；视野；意见；风景<br>组件构成<br>实体组件：在图表上有对应的图形、文本显示。<br>抽象组件：没有显示，是一种概念抽象组件。<br>实体组件 图表父组件，所有的其他组件都必须由 包裹。<br>抽象组件 坐标系组件。, 用来描述 ##### 组件的坐标系，比如笛卡尔坐标系、极坐标系等。<br>实体组件 坐标轴组件, 。<br>实体组件 几何标记组件, 。即我们所说的点、线、面这些几何图形。<br>实体组件 几何标记的辅助文本组件, 。该组件必须作为 的子组件。<br>实体组件 提示框组件, 。<br>非常用图表组件<br>实体组件 辅助标记组件, 。<br>实体组件 辅助标记线组件, 。该组件处于 Guide 组件命名空间下，且必须作为 的子组件才会生效。<br>实体组件 辅助标记图片组件, 。该组件处于 Guide 组件命名空间下。且必须作为 的子组件才会生效<br>实体组件 辅助标记文本组件, 。该组件处于 Guide 组件命名空间下。且必须作为 的子组件才会生效<br>实体组件 辅助标记举行组件, 。该组件处于 Guide 组件命名空间下。且必须作为 的子组件才会生效<br>实体组件 辅助标记弧形组件, 。该组件处于 Guide 组件命名空间下。且必须作为 的子组件才会生效<br>实体组件 辅助标记 html 组件, 。该组件处于 Guide 组件命名空间下。且必须作为 的子组件才会生效<br>实体组件 辅助框组件，，框选一段图区，设置背景、边框等。<br>实体组件 辅助 html，，指定位置添加自定义 html，显示自定义信息。<br>实体组件 辅助弧线，。<br>抽象组件 分面组件，。<br>抽象组件 视图组件，<br>图表插件有:<br>图标插件 使用前必须确定已经安装了 Bizcarts。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://m2666666.github.io/2019/07/13/day0613001/" data-id="cjy19p4zd000m5ktkubznj6w5" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/13/day0713001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/13/day0526001/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/13/day0713004/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713003/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713002/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713001/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0613001/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 zxm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>

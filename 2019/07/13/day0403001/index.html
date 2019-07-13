@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+
+  
+  <title>zxm博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="原型定义： 原型是function对象的一个属性，它定义了构造函数制造出的对象的公共祖先。通过该构造函数生产的对象，可以继承该原型的属性和方法。原型也是对象。1.利用原型特点和概念，可以提取共有属性。2.对象如何查看原型—》隐式属性proto3.对象如何查看对象的构造函数—》constructor 123456789101112131415161718&amp;lt;!DOCTYPE html&amp;gt;&amp;l">
+<meta property="og:type" content="article">
+<meta property="og:title" content="zxm博客">
+<meta property="og:url" content="https://m2666666.github.io/2019/07/13/day0403001/index.html">
+<meta property="og:site_name" content="zxm博客">
+<meta property="og:description" content="原型定义： 原型是function对象的一个属性，它定义了构造函数制造出的对象的公共祖先。通过该构造函数生产的对象，可以继承该原型的属性和方法。原型也是对象。1.利用原型特点和概念，可以提取共有属性。2.对象如何查看原型—》隐式属性proto3.对象如何查看对象的构造函数—》constructor 123456789101112131415161718&amp;lt;!DOCTYPE html&amp;gt;&amp;l">
+<meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-07-13T08:27:52.776Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="zxm博客">
+<meta name="twitter:description" content="原型定义： 原型是function对象的一个属性，它定义了构造函数制造出的对象的公共祖先。通过该构造函数生产的对象，可以继承该原型的属性和方法。原型也是对象。1.利用原型特点和概念，可以提取共有属性。2.对象如何查看原型—》隐式属性proto3.对象如何查看对象的构造函数—》constructor 123456789101112131415161718&amp;lt;!DOCTYPE html&amp;gt;&amp;l">
+  
+    <link rel="alternate" href="/atom.xml" title="zxm博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+</html>
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">zxm博客</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://m2666666.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-day0403001" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2019/07/13/day0403001/" class="article-date">
+  <time datetime="2019-07-13T08:27:52.728Z" itemprop="datePublished">2019-07-13</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h3><p>定义： 原型是function对象的一个属性，它定义了构造函数制造出的对象的公共祖先。通过该构造函数生产的对象，可以继承该原型的属性和方法。原型也是对象。<br>1.利用原型特点和概念，可以提取共有属性。<br>2.对象如何查看原型—》隐式属性<em>proto</em><br>3.对象如何查看对象的构造函数—》constructor</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">		//Person.prototype --原型</span><br><span class="line">//Person.prototype=&#123;&#125; 是祖先</span><br><span class="line">Person.prototype.lastName=&quot;xiaohao&quot;;</span><br><span class="line">function Person(name)&#123;this.name=name;&#125;</span><br><span class="line">var person=new Person(&apos;xiaodong&apos;);//如果自身没有的属性会去原型里面找，person对象自身无法删除Person.prototype原型里面的属性</span><br><span class="line"></span><br><span class="line">	&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="原型-，原型链-，call-apply"><a href="#原型-，原型链-，call-apply" class="headerlink" title="原型 ，原型链 ，call/apply"></a>原型 ，原型链 ，call/apply</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	Person.prototype.name=&quot;xiaoming&quot;;</span><br><span class="line">	function Person()&#123;</span><br><span class="line">//var this =&#123;__proto__:Person.prototype&#125;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	var person=new Person();</span><br><span class="line">	 Person.prototype=&#123;</span><br><span class="line">		name:&apos;xiaohong&apos;</span><br><span class="line">	&#125;</span><br><span class="line">	</span><br><span class="line">	//  Person.prototype.name=&quot;xiaohong&quot;;  //在原有基础上修改</span><br><span class="line">	//结果是xiaohong</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">	//Person.prototype=&#123;  //新对象</span><br><span class="line">	//	name:&apos;xiaohong&apos;</span><br><span class="line">	//&#125;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	//概念如下</span><br><span class="line">	//var obj=&#123;name:&quot;a&quot;&#125;;</span><br><span class="line">	//var obj1=obj;</span><br><span class="line">	//obj=&#123;name:&quot;b&quot;&#125;</span><br><span class="line"></span><br><span class="line">	//Person.prototype=P&#123;name:&quot;a&quot;&#125;;</span><br><span class="line">	//__proto__=Person.prototype;</span><br><span class="line">	//Person.prototype=&#123;name:&quot;b&quot;&#125;;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">//原型还有原型</span><br></pre></td></tr></table></figure>
+
+<p>###　ｃall /apply<br>改变this指向，传参不同</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">function Person(name,age)&#123;</span><br><span class="line">	//this==obj</span><br><span class="line">	this.name=name;</span><br><span class="line">	this.age=age</span><br><span class="line">&#125;</span><br><span class="line">var person=new Person(&apos;deng&apos;,100);</span><br><span class="line">var obj=&#123;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">Person.call(obj);//1.第一参数改变this的指向 ，第二参数传实参 2.借用别人的方法进行加工</span><br></pre></td></tr></table></figure>
+
+<h4 id="call"><a href="#call" class="headerlink" title="call"></a>call</h4><p>call需要把实参按照形参的个数传进去</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">function Person(name,age,sex)&#123;</span><br><span class="line">	this.name=name;</span><br><span class="line">	this.age=age;</span><br><span class="line">	this.sex=sex;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function Student(name,age,sex,tel,grade)&#123;</span><br><span class="line">	Person.call(this,name,age,sex);//借用别人函数实现自己的功能</span><br><span class="line">	this.tel=tel;</span><br><span class="line">	this.grade=grade;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var student=new Student(&apos;sunny&apos;,123,&apos;male&apos;,139,2018);</span><br></pre></td></tr></table></figure>
+
+<h4 id="apply"><a href="#apply" class="headerlink" title="apply"></a>apply</h4><p>apply 需要传一个arguments</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line"></span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	</span><br><span class="line">function Person(name,age,sex)&#123;</span><br><span class="line">	this.name=name;</span><br><span class="line">	this.age=age;</span><br><span class="line">	this.sex=sex;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function Student(name,age,sex,tel,grade)&#123;</span><br><span class="line">	Person.apply(this,[name,age,sex]);//借用别人函数实现自己的功能</span><br><span class="line">	this.tel=tel;</span><br><span class="line">	this.grade=grade;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var student=new Student(&apos;sunny&apos;,123,&apos;male&apos;,139,2018);</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">var name =&apos;小王&apos;，age=17;</span><br><span class="line">var obj=&#123;</span><br><span class="line">	name:&apos;小张&apos;，</span><br><span class="line">	objAge:this.age,</span><br><span class="line">	myFun:function(fm,t)&#123;</span><br><span class="line">		console.log(this.name+&apos;年龄&apos;+this.age);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">	var db=&#123;</span><br><span class="line">		name:&apos;德玛&apos;，</span><br><span class="line">		age:99</span><br><span class="line">	&#125;</span><br><span class="line">	obj.myFun.apply(db,[&apos;成都&apos;，&apos;上海&apos;])；</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="bind"><a href="#bind" class="headerlink" title="bind"></a>bind</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	function Person(name,age,sex)&#123;</span><br><span class="line">	this.name=name;</span><br><span class="line">	this.age=age;</span><br><span class="line">	this.sex=sex;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">function Student(name,age,sex,tel,grade)&#123;</span><br><span class="line">	Person.bind(this,name,age,sex)();//借用别人函数实现自己的功能</span><br><span class="line">	this.tel=tel;</span><br><span class="line">	this.grade=grade;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line">var student=new Student(&apos;sunny&apos;,123,&apos;male&apos;,139,2018);</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="call-apply-bind-微妙的差距！"><a href="#call-apply-bind-微妙的差距！" class="headerlink" title="call apply bind 微妙的差距！"></a>call apply bind 微妙的差距！</h3><p>从上面四个结果不难看出:</p>
+<p>call 、bind 、 apply 这三个函数的第一个参数都是 this 的指向对象，第二个参数差别就来了：</p>
+<p>call 的参数是直接放进去的，第二第三第 n 个参数全都用逗号分隔，直接放到后面 obj.myFun.call(db,’成都’, … ,’string’ )。</p>
+<p>apply 的所有参数都必须放在一个数组里面传进去 obj.myFun.apply(db,[‘成都’, …, ‘string’ ])。</p>
+<p>bind 除了返回是函数以外，它 的参数和 call 一样。</p>
+<p>当然，三者的参数不限定是 string 类型，允许是各种类型，包括函数 、 object 等等！</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">	&lt;meta charset=&quot;utf-8&quot;&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	var name =&apos;小王&apos;,age=17;</span><br><span class="line">var obj=&#123;</span><br><span class="line">	name:&apos;小张&apos;,</span><br><span class="line">	objAge:this.age,</span><br><span class="line">	myFun:function(fm,t)&#123;</span><br><span class="line">		console.log(this.name+&apos;年龄&apos;+this.age,&apos;来自&apos;+fm+&quot;去往&quot;+t);</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br><span class="line">	var db=&#123;</span><br><span class="line">		name:&apos;德玛&apos;,</span><br><span class="line">		age:99</span><br><span class="line">	&#125;</span><br><span class="line">	obj.myFun.call(db,&apos;成都&apos;,&apos;上海&apos;)；//德玛年龄99 来自成都去往上海</span><br><span class="line">	obj.myFun.apply(db,[&apos;成都&apos;,&apos;上海&apos;]);//德玛年龄99 来自成都去往上海</span><br><span class="line">	obj.myFun.bind(db,&apos;成都&apos;,&apos;上海&apos;)(); //德玛年龄99 来自成都去往上海</span><br><span class="line">    obj.myFun.bind(db,[&apos;城都&apos;,&apos;上海&apos;])();//结果 德玛年龄99 来自城都,上海去往undefined</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+<h3 id="小知识"><a href="#小知识" class="headerlink" title="小知识"></a>小知识</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//1.运行test()和new test()的结果分别是什么？</span><br><span class="line">var a=5;</span><br><span class="line">function test()&#123;</span><br><span class="line">	a=0;</span><br><span class="line">	alert(a);</span><br><span class="line">	alert(this.a);</span><br><span class="line">	var a;</span><br><span class="line">	alert(a);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="什么是DOM-Document-Object-Model"><a href="#什么是DOM-Document-Object-Model" class="headerlink" title="什么是DOM Document Object Model"></a>什么是DOM Document Object Model</h3><p>DOM定义了表示和修改文档所需的方法。DOM对象即为宿主对象，由浏览器厂商定，用来操作html和xml功能的一类对象集。也有人称DOM是对html以及xml的标准编程接口。</p>
+<h5 id="xml里面可以自定义"><a href="#xml里面可以自定义" class="headerlink" title="xml里面可以自定义"></a>xml里面可以自定义</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">&lt;!DOCTYPE html&gt;</span><br><span class="line">&lt;html&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">	&lt;title&gt;&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">	&lt;div&gt;&lt;/div&gt;</span><br><span class="line">&lt;script type=&quot;text/javascript&quot;&gt;</span><br><span class="line">	var div =document.getElementsByTagName(&apos;div&apos;)[0];</span><br><span class="line">	div.style.width=&quot;100px&quot;;</span><br><span class="line">	div.style.height=&quot;100px&quot;;</span><br><span class="line">	div.style.backgroundColor=&quot;red&quot;;</span><br><span class="line">	div.onclick=function()&#123;</span><br><span class="line">		this.style.backgroundColor=&apos;green&apos;;</span><br><span class="line">		this.style.width=200px;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://m2666666.github.io/2019/07/13/day0403001/" data-id="cjy19p4xa00055ktk94s0d7eq" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2019/07/13/day0404001/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2019/07/13/day0402001/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2019/07/13/day0713004/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713003/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713002/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0713001/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2019/07/13/day0613001/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2019 zxm<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+
+
+  </div>
+</body>
+</html>
